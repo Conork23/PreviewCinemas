@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewCinemas", "PreviewCinemas\PreviewCinemas.csproj", "{5CBC2C20-449A-441B-A0CE-40F30F3C4886}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PreviewCinemas", "PreviewCinemas\PreviewCinemas.csproj", "{1E643B8C-EFF0-4BC9-B7AD-8DAB82EFD690}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CBC2C20-449A-441B-A0CE-40F30F3C4886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CBC2C20-449A-441B-A0CE-40F30F3C4886}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CBC2C20-449A-441B-A0CE-40F30F3C4886}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CBC2C20-449A-441B-A0CE-40F30F3C4886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E643B8C-EFF0-4BC9-B7AD-8DAB82EFD690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E643B8C-EFF0-4BC9-B7AD-8DAB82EFD690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E643B8C-EFF0-4BC9-B7AD-8DAB82EFD690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E643B8C-EFF0-4BC9-B7AD-8DAB82EFD690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

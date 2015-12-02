@@ -1,0 +1,105 @@
+﻿@model PreviewCinemas.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+
+
+}
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+
+<div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <img style="max-width:100%" src="../@Html.DisplayFor(model=> model.ImageURI)" />
+        </div>
+        <div class="col-md-8">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Length)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Length) mins
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Genra)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Genra)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.year)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.year)
+                </dd>
+
+            </dl>
+
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+
+                @{
+
+                    string allDates = "";
+
+                    foreach (var item in Model.Showings)
+                    {
+                        allDates = allDates + item.DateAndTime.ToShortDateString() + " ";
+                    }
+
+                    var uniqueDates = new HashSet<string>(allDates.Split(' '));
+
+                    foreach (string date in uniqueDates)
+                    {
+                        <tr>
+                            <td>
+                                @date
+                            </td>
+
+                            <td>
+                                @foreach (var time in Model.Showings)
+                                {
+                                    string currentDate = time.DateAndTime.ToShortDateString();
+                                    if (currentDate == date)
+                                    {
+                                        <a href="@Url.Action("Details", "Showings", new { id = time.ShowingID })">
+                                            <div class="times">
+                                                @time.DateAndTime.ToString("HH:mm") 
+                                            </div>
+                                        </a>
+                                    }
+
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+            </table>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MovieID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

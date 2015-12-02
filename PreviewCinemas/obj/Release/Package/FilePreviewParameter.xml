@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PreviewCinemas" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Conor\\Documents\\BackUP\\PreviewCinemas\\PreviewCinemas\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Conor\\Documents\\BackUP\\PreviewCinemas\\PreviewCinemas\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="CinemaContext-Web.config Connection String" description="" value="Data Source=tcp:t1tjyxo4kx.database.windows.net,1433;Initial Catalog=PreviewAal0c7H4E;User Id=Conork23@t1tjyxo4kx;Password=Ck5016123" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Conor\\Documents\\BackUP\\PreviewCinemas\\PreviewCinemas\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CinemaContext']/@connectionString" />
+  </parameter>
+</parameters>

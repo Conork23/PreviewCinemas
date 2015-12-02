@@ -1,0 +1,27 @@
+﻿@model IEnumerable<PreviewCinemas.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Movies</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="MovDisplay">
+            <figure>
+                <a href="@Url.Action("Details", "Movies", new { id = item.MovieID })">
+                    <img width="140px" height="207px" src="@Html.DisplayFor(modelItem => item.ImageURI)" />
+                    <figcaption>@Html.DisplayFor(modelItem => item.Title)</figcaption>
+                </a>
+            </figure>
+        </div>
+                
+    }
+</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+

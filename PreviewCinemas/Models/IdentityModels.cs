@@ -21,7 +21,7 @@ namespace PreviewCinemas.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("CinemaContext", throwIfV1Schema: false)
         {
         }
 

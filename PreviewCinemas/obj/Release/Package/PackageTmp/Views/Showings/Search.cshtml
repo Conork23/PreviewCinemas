@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search Showing by Movie</h2>
+
+<div>
+    <form>
+        <input id="searchString" type="text" placeholder="Movie Name" />
+        <input type="button" value="Search" onclick="DoSearch();" />
+    </form>
+</div>
+<div id="resultsDiv"></div>
+
+
+
+
+@section scripts{
+    <script type="text/javascript">
+        function DoSearch() {
+
+            $("#resultsDiv").html("");
+            var namePart = { "namePart": $("#searchString").val() };
+
+           
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "~/Models/CinemaServices.asmx/GetShowings",
+                data: JSON.stringify(namePart),
+                dataType: "json",
+                async: true,
+                success: function (result, status) {
+                    if (status == "success") {
+                        for (var i = 0; i < result.d.length; i++) {
+                            $("#resultsDiv").html($("#resultsDiv").html() + result.d[i] + "<br/>");
+                        }
+                    }
+                },
+                error: function (result, status, error) {
+                    $("#resultsDiv").html("<p>"+status+"</p>");
+                }
+
+            });
+        }
+    </script>
+}
+
